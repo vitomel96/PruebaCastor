@@ -1,0 +1,165 @@
+//VARIABLES
+$primary-color: #0e79d7;
+$second-color: white;
+
+body{
+  margin: 0;
+  background: #dedede;
+}
+
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button.default{
+  background: transparent;
+  border-radius: 10px;
+  border-color: rgb(14 121 215 / 90%);
+  color: $primary-color;
+}
+button.default2{
+  background: white;
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+}
+
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+
+.inputFilter {
+  height: 3rem;
+  color: white;
+}
+
+::ng-deep.mat-mdc-select-value, .gold, ::ng-deep.mat-mdc-paginator-icon {
+  color: $primary-color;
+  fill: $primary-color;
+}
+::ng-deep .mdc-text-field--filled {
+  border-color: white;
+}
+::ng-deep .mdc-text-field--filled .mdc-line-ripple::after {
+  border-color: $primary-color!important;
+}
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled),
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c166-0.mdc-text-field--filled {
+  background-color: transparent !important;
+  width: 100%;
+}
+
+.mat-mdc-table {
+  background: none;
+}
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label,
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: white;
+}
+::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__leading,
+::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__notch,
+::ng-deep.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-notched-outline .mdc-notched-outline__trailing,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing,
+::ng-deep .mat-mdc-select-arrow svg  {
+  border-color: $primary-color;
+  fill: $primary-color!important;
+}
+::ng-deep.mdc-list-item--selected .mdc-list-item__primary-text,
+::ng-deep.mdc-list-item--activated
+::ng-deep.mdc-list-item__primary-text {
+  color: white;
+}
+::ng-deep.mdc-menu-surface {
+  background-color: $primary-color;
+}
+
+
+.mat-mdc-select-value {
+  color: white;
+}
+
+.mat-mdc-paginator {
+  background: none;
+  color: black;
+}
+
+.mdc-data-table__content {
+  background: none;
+}
+
+.mdc-data-table__header-row {
+  background: $primary-color;
+}
+
+.bg-none .mat-mdc-text-field-wrapper {
+  width: 25%;
+  background: none;
+}
+
+.mat-mdc-table .mdc-data-table__row {
+  background: none;
+}
+
+.bg-none {
+  background: none;
+  border: none;
+
+}
+.defaultCard{
+  background: rgba(14, 121, 215, 0.75);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(14, 121, 215, 0.35);
+  padding: 20px;
+
+}
+.min-width70{
+  min-width: 70vw;
+}
+.PhotosPreview{
+  position: absolute;
+  top: 8%;
+  width: 150px;
+  height: 160px;
+  border-radius: 50px 50px 0 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.photoContainer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.photoContainer img{
+  border-radius: 20px 20px 0 0;
+}
+@media (max-width: 769px) {
+  .min-h80{
+    max-width: 100vw;
+    overflow: auto;
+  }
+  .min-width70{
+    max-width: 100vw;
+    overflow: auto;
+  }
+  .defaultCard{
+    margin-top: 5rem;
+  }
+  .PhotosPreview{
+    top: 18%;
+  }
+}

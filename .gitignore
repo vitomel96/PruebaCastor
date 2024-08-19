@@ -1,6 +1,6 @@
 # Node.js
-CastorFrontend/node_modules/
-CastorFrontend/.angular/
+Frontend/node_modules/
+Frontend/.angular/git
 
 # .NET
 CastorBackend/bin/
@@ -19,9 +19,9 @@ Thumbs.db
 /bazel-out
 
 # Node
-/node_modules
-npm-debug.log
-yarn-error.log
+
+Frontend/npm-debug.log
+Frontend/yarn-error.log
 
 # IDEs and editors
 .idea/
@@ -33,15 +33,15 @@ yarn-error.log
 *.sublime-workspace
 
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+Frontend/.vscode/*
+Frontend/!.vscode/settings.json
+Frontend/!.vscode/tasks.json
+Frontend/!.vscode/launch.json
+Frontend/!.vscode/extensions.json
+Frontend/.history/*
 
 # Miscellaneous
-/.angular/cache
+Frontend/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage

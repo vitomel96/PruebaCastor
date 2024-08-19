@@ -1,0 +1,19 @@
+@import '../../../../../styles.scss';
+$header-height: 50px;
+
+.header{
+  height: $header-height;
+}
+.photo{
+  width: 50px;
+  border-radius: 40%;
+  overflow: hidden;
+}
+.user{
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 1rem 2rem;
+  gap: 1rem;
+}

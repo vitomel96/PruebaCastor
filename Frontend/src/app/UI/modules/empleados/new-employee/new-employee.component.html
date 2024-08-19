@@ -1,0 +1,58 @@
+<form method="post" #myForm="ngForm">
+  <div class="bg-default">
+    <div class="d-flex flex-column text-white">
+      <div class="d-flex flex-column align-items-center my-5">
+        <div class="d-flex w-100">
+          <fa-icon [icon]="return" (click)="this.returnF()" class="Reverse"></fa-icon>
+          </div>
+        <div class="min-width70">
+          <div class="defaultCard">
+            <h4>Añadir empleado</h4>
+            <div class="photoContainer">
+              <div class="PhotosPreview" (click)="showModal()">
+                <div class="d-flex position-relative justify-content-end">
+
+              </div>
+              <img  class="img-fluid" [src]="foto ? foto : '/assets/avatar.png'" />
+            </div>
+            </div>
+            <div class="row">
+
+              <div class="mb-3 col">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input id="nombre" type="text" class="form-control" [value]="nombre" (input)="onNameChange($event.target)" />
+              </div>
+
+              <div class="mb-3 col">
+                <label for="cedula" class="form-label">Cedula:</label>
+                <input id="cedula" type="number" maxlength="10" class="form-control" [value]="cedula" (input)="onCedulaChange($event.target)" />
+              </div>
+</div>
+              <div class="mb-3 row">
+              <div  class="">
+                <label for="category" class="form-label">Cargo</label>
+                <select class="form-select"  id="category" (change)="onCargoChange($event)">
+                  <option>Asignar un cargo</option>
+                  <option *ngFor="let option of cargosCollection; let i = index" value="{{ option.id }}">{{option.nombre}}</option>
+                  </select>
+              </div>
+
+            </div>
+
+              <div class="d-flex justify-content-end">
+                <button (click)="canCreateEmployee() ? create() : null" [ngClass]="canCreateEmployee() ? null : 'disabled'" class="default2 mt-5">Añadir</button>
+              </div>
+            </div>
+          </div>
+
+
+            <app-image-modal *ngIf="openModal === true" (croppedImageChanged)="onCroppedImageChanged($event)"
+            [currentImage]="currentImage" (close)="closeModal()" (showModal)="showModal()">
+
+          </app-image-modal>
+
+
+          </div>
+        </div>
+      </div>
+</form>

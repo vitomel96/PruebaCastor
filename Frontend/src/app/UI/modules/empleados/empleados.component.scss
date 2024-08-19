@@ -1,0 +1,22 @@
+@import '../../../../styles.scss';
+
+.employeeContainer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.employeeContainer h3{
+  margin: 0;
+}
+.employeeContainer .employeeAvatar{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+@media(max-width: 768px){
+  .sm-overflow{
+    overflow: auto;
+    height: 300px;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="layout-container">
+  <button class="menu-toggle btn btn-large" (click)="toggleSidebar()">
+    <fa-icon [icon]="faMenu"></fa-icon>
+  </button>
+
+  <div class="sidebar" [ngClass]="{'show': isSidebarOpen, 'hide': !isSidebarOpen}">
+    <div class="sidebar-content">
+      <button class="menu-toggle btn btn-large" (click)="toggleSidebar()">
+        <fa-icon [icon]="faX"></fa-icon>
+      </button>
+      <ul class="nav-bar">
+        <li class="logo">
+          <img src="assets/LOGO.png" class="img-fluid">
+        </li>
+        <li>
+          <a class="nav-item" [routerLink]="['/']" (click)="toggleSidebar()">Home</a>
+        </li>
+        <li>
+          <a class="nav-item" [routerLink]="['/empleados']" (click)="toggleSidebar()">Empleados</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <app-header></app-header>
+    <div class="router-wrapper">
+      <router-outlet #routerOutlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

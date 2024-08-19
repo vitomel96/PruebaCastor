@@ -1,0 +1,51 @@
+<div class="modalDefault text-white">
+  <div class="dialog">
+    <div class="modalContent">
+      <div class="modalHeader">
+          <div class="d-flex justify-content-end">
+          <button (click)="closeModal()" style="position: relative;
+          left: -0.5rem;
+          background: none;
+          border: none;
+          font-size: 1.25rem;
+          top: 0.5rem;"><fa-icon class="gold" [icon]="faX"></fa-icon></button>
+      </div>
+    
+ 
+  </div>
+  <div class="modalBody">
+      <input type="file" id="upload" (change)="fileChangeEvent($event)" hidden />
+      <label id="uploadLabel" for="upload">Subir imagen</label>
+     
+      <image-cropper
+      [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [containWithinAspectRatio]="containWithinAspectRatio"
+      [aspectRatio]="3 / 4"
+      [resizeToWidth]="256"
+      [cropperMinWidth]="128"
+      [onlyScaleDown]="true"
+      [roundCropper]="false"
+      [canvasRotation]="canvasRotation"
+      [alignImage]="'left'"
+      [style.display]="showCropper ? null : 'none'"
+      format="png"
+      output="base64"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady($event)"
+      (loadImageFailed)="loadImageFailed()"
+      [transform]="transform"
+  ></image-cropper>
+  <div class="d-flex justify-content-center position-relative mt-2 gap-2">
+    <button (click)="zoomOut()" class="btn zoom">Zoom -</button>
+    <button (click)="zoomIn()"class="btn zoom">Zoom +</button>
+  </div>
+  </div>
+  <button class="default2" (click)="save()" style="width: 30%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+" >Guardar</button>
+</div>
