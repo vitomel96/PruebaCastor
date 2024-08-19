@@ -1,0 +1,11 @@
+# Node.js
+CastorFrontend/node_modules/
+CastorFrontend/.angular/
+
+# .NET
+CastorBackend/bin/
+CastorBackend/obj/
+
+# Sistema
+.DS_Store
+Thumbs.db

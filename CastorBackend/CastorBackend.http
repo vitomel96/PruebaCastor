@@ -1,0 +1,6 @@
+@CastorBackend_HostAddress = http://localhost:5076
+
+GET {{CastorBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
